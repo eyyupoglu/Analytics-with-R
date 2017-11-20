@@ -6,6 +6,7 @@ HE.orig <- read.table("soenderborg2_data.csv", sep=" ", header=TRUE, as.is=TRUE)
 ## The first column 't' needs to be changed from a character to a date.
 ## Add an extra column
 HE.orig$time <- as.Date(x = HE.orig$t, format = "%Y-%m-%d")
+HE.orig$time <- as.Date(x = HE.orig$t, format = "%Y-%m-%d")
 
 ## Select the heating period 2009/2010 and the four houses
 HE <- subset(HE.orig, ("2009-10-15" <= time & time < "2010-04-16")&
